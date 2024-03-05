@@ -33,7 +33,12 @@ public class JFileChooserForm extends JFrame {
         file.add(saveAsItem);
         saveAsItem.addActionListener(e -> SaveAs());
 
-
+        bt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ChooseFile();
+            }
+        });
     }
     public void ChooseFile() {
         JFileChooser fc = new JFileChooser(".");
